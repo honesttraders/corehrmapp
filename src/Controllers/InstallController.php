@@ -1,12 +1,12 @@
 <?php
 
-namespace SpondonIt\LmsService\Controllers;
+namespace HonestTraders\CoreHrmApp\Controllers;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use SpondonIt\LmsService\Repositories\InstallRepository;
-use SpondonIt\Service\Repositories\InstallRepository as ServiceRepository;
-use SpondonIt\LmsService\Requests\UserRequest;
+use HonestTraders\CoreService\Repositories\InstallRepository as ServiceRepository;
+use HonestTraders\CoreHrmApp\Requests\UserRequest;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Facades\Artisan;
 

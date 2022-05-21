@@ -1,11 +1,11 @@
 <?php
 
-namespace SpondonIt\CoreHrmAppService\Middleware;
+namespace HonestTraders\CoreHrmApp\Middleware;
 
 use Closure;
 use Illuminate\Support\Facades\Storage;
-use SpondonIt\Service\Repositories\InitRepository as ServiceRepository;
-use SpondonIt\LmsService\Repositories\InitRepository;
+use HonestTraders\CoreService\Repositories\InitRepository as ServiceRepository;
+use HonestTraders\CoreHrmApp\Repositories\InitRepository;
 
 
 class CoreHrmAppService{

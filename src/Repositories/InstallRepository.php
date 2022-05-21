@@ -1,6 +1,6 @@
 <?php
 
-namespace SpondonIt\LmsService\Repositories;
+namespace HonestTraders\CoreHrmApp\Repositories;
 ini_set('max_execution_time', -1);
 
 use Carbon\Carbon;
@@ -9,7 +9,7 @@ use Modules\Setting\Model\GeneralSetting;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Validation\ValidationException;
 use Illuminate\Support\Facades\Schema;
-use SpondonIt\Service\Repositories\InstallRepository as ServiceInstallRepository;
+use HonestTraders\CoreService\Repositories\InstallRepository as ServiceInstallRepository;
 
 
 class InstallRepository
