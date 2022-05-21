@@ -3,7 +3,7 @@
     "description": "Service Provider for HRM application for Honest Traders",
     "type": "library",
     "require": {
-        "honesttraders/corehrmapp": "dev-master"
+        "honesttraders/core-service": "dev-main"
     },
     "license": "MIT",
     "authors": [
