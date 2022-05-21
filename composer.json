@@ -1,0 +1,28 @@
+{
+    "name": "honesttraders/corehrmapp",
+    "description": "Service Provider for HRM application for Honest Traders",
+    "type": "library",
+    "require": {
+        "honesttraders/corehrmapp": "dev-master"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "honesttraders",
+            "email": "honesttradersbd@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "autoload": {
+        "psr-4": {
+            "HonestTraders\\CoreHrmApp\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "HonestTraders\\CoreHrmApp\\HonestTradersHrmServiceProvider"
+            ]
+        }
+    }
+}
