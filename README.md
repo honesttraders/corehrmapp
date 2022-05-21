@@ -1,4 +1,4 @@
-# Honest Traders Ltd IT Core Service
+# Honest Traders Ltd IT HRM Core Service
 
 [![Latest Version on Packagist](https://img.shields.io/packagist/v/honesttraders/core-service.svg?style=flat-square)](https://packagist.org/packages/honesttraders/core-service)
 [![Software License](https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square)](LICENSE.md)
@@ -15,7 +15,7 @@
 |---|---|
 | 7.0  | ^1.0 |
 
-`honesttraders/core-service` is a Laravel package which manage your application installation and update system. This package is supported and tested in Laravel 7. It is a core package of honesttraders.
+`honesttraders/corehrmapp` is a Laravel package which manage your application installation and update system. This package is supported and tested in Laravel 7. It is a core package of honesttraders.
 
 ## Requirements
 - [PHP >= 7.2](http://php.net/)
