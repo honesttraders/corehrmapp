@@ -1,7 +1,7 @@
 <?php
 return array(
     "welcome" => "Welcome",
-    "welcome_title" => "Welcome To Spondonit",
+    "welcome_title" => "Welcome To Honest Traders",
 "admin_setup" => "Admin Setup",
 "done_msg" => "Installation done. You can now login.",
 "email" => "Email",

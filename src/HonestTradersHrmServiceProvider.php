@@ -4,7 +4,7 @@ namespace HonestTraders\CoreHrmApp;
 
 use Illuminate\Support\ServiceProvider;
 use Illuminate\Contracts\Http\Kernel;
-use HonestTraders\CoreHrmApp\Middleware\LmsService;
+use HonestTraders\CoreHrmApp\Middleware\CoreHrmAppService;
 
 class HonestTradersHrmServiceProvider extends ServiceProvider
 {
@@ -26,7 +26,7 @@ class HonestTradersHrmServiceProvider extends ServiceProvider
     public function boot()
     {
         $kernel = $this->app->make(Kernel::class);
-        $kernel->pushMiddleware(LmsService::class);
+        $kernel->pushMiddleware(CoreHrmAppService::class);
 
         $this->loadRoutesFrom(__DIR__.'/../routes/web.php');
         $this->loadTranslationsFrom(__DIR__.'/../resources/lang', 'lms');

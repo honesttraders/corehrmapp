@@ -1,6 +1,6 @@
 <?php
 
-namespace SpondonIt\LmsService\Repositories;
+namespace HonestTraders\CoreHrmApp\Repositories;
 
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Schema;
