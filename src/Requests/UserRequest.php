@@ -1,6 +1,6 @@
 <?php
 
-namespace HonestTraders\CoreService\Requests;
+namespace HonestTraders\CoreHrmApp\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
 
