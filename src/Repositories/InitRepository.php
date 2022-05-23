@@ -18,16 +18,16 @@ class InitRepository
     {
         config([
             'app.item' => '30626608',
-            // 'spondonit.module_manager_model' => \Modules\ModuleManager\Entities\InfixModuleManager::class,
-            // 'spondonit.module_manager_table' => 'infix_module_managers',
-            // 'spondonit.saas_module_name' => 'LmsSaas',
-            // 'spondonit.module_status_check_function' => 'isModuleActive',
-            // 'spondonit.settings_model' => \Modules\Setting\Model\GeneralSetting::class,
-            // 'spondonit.module_model' => \Nwidart\Modules\Facades\Module::class,
+            // 'honesttraders.module_manager_model' => \Modules\ModuleManager\Entities\InfixModuleManager::class,
+            // 'honesttraders.module_manager_table' => 'infix_module_managers',
+            // 'honesttraders.saas_module_name' => 'LmsSaas',
+            // 'honesttraders.module_status_check_function' => 'isModuleActive',
+            // 'honesttraders.settings_model' => \Modules\Setting\Model\GeneralSetting::class,
+            // 'honesttraders.module_model' => \Nwidart\Modules\Facades\Module::class,
 
-            'spondonit.user_model' => \App\Models\User::class,
-            // 'spondonit.settings_table' => 'general_settings',
-            // 'spondonit.database_file' => 'infixlms.sql',
+            'honesttraders.user_model' => \App\Models\User::class,
+            // 'honesttraders.settings_table' => 'general_settings',
+            // 'honesttraders.database_file' => 'infixlms.sql',
         ]);
 
     }
