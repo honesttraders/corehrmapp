@@ -5,6 +5,7 @@ namespace HonestTraders\CoreHrmApp;
 use Illuminate\Support\ServiceProvider;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Contracts\Http\Kernel;
+use App\Models\coreApp\Setting\Setting;
 use Illuminate\Support\Facades\Schema;
 use HonestTraders\CoreHrmApp\Middleware\CoreHrmAppService;
 
