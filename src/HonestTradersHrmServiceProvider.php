@@ -3,7 +3,9 @@
 namespace HonestTraders\CoreHrmApp;
 
 use Illuminate\Support\ServiceProvider;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Contracts\Http\Kernel;
+use Illuminate\Support\Facades\Schema;
 use HonestTraders\CoreHrmApp\Middleware\CoreHrmAppService;
 
 class HonestTradersHrmServiceProvider extends ServiceProvider
@@ -25,6 +27,20 @@ class HonestTradersHrmServiceProvider extends ServiceProvider
      */
     public function boot()
     {
+
+        try {
+            DB::connection()->getPdo();
+            if (Schema::hasTable('settings')) {
+                $settings = Setting::get()->pluck('value', 'name');
+                foreach ($settings as $key => $value) {
+                    config()->set("settings.app.{$key}", $value);
+                }
+            }
+        } catch (\Exception $e) {
+            \Log::error("Could not connect to the database.  Please check your configuration. error:" . $e);
+        }
+
+
         $kernel = $this->app->make(Kernel::class);
         $kernel->pushMiddleware(CoreHrmAppService::class);
 
