@@ -136,7 +136,7 @@ $base_path = 'public/vendor/honesttraders';
         _formValidation('content_form');
         $(document).ready(function(){
             setTimeout(function(){
-                $('.preloader h2').html('We are installing your system. <br> This may take some time. Be patient. Please do not refresh or close the browser')
+                $('.preloader h2').html('Installing The System. <br> This may take some time. Be patient. Do not refresh or close your browser')
             }, 2000);
         })
     </script>
