@@ -52,7 +52,7 @@ class InstallRepository
 
         } catch (\Exception $e) {
 
-            Storage::delete(['.user_email', '.user_pass']);
+            Storage::disk('local')->delete(['.user_email', '.user_pass']);
             \Log::info($e);
             // throw ValidationException::withMessages(['message' => $e->getMessage()]);
 

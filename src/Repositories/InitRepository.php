@@ -64,8 +64,8 @@ class InitRepository
 
             // app()->singleton('getMainPaymentSetting', function () {
             //     $domain = 'main';
-            //     $path = Storage::path('payment.json');
-            //     if (!Storage::has('payment.json')) {
+            //     $path = Storage::disk('local')->path('payment.json');
+            //     if (!Storage::disk('local')->has('payment.json')) {
             //         GeneratePaymentSetting($domain);
             //     }
             //     $data = json_decode(file_get_contents($path), true);
@@ -78,8 +78,8 @@ class InitRepository
 
             // app()->singleton('getPaymentSetting', function () {
             //     $domain = SaasDomain();
-            //     $path = Storage::path('payment.json');
-            //     if (!Storage::has('payment.json')) {
+            //     $path = Storage::disk('local')->path('payment.json');
+            //     if (!Storage::disk('local')->has('payment.json')) {
             //         GeneratePaymentSetting($domain);
             //     }
             //     $data = json_decode(file_get_contents($path), true);
@@ -96,8 +96,8 @@ class InitRepository
             //         $domain = 'main';
             //     }
 
-            //     $path = Storage::path('settings.json');
-            //     if (!Storage::has('settings.json')) {
+            //     $path = Storage::disk('local')->path('settings.json');
+            //     if (!Storage::disk('local')->has('settings.json')) {
             //         GenerateGeneralSetting($domain);
             //     }
             //     $data = json_decode(file_get_contents($path), true);
@@ -119,8 +119,8 @@ class InitRepository
             //     } else {
             //         $domain = 'main';
             //     }
-            //     $path = Storage::path('homeContent.json');
-            //     if (!Storage::has('homeContent.json')) {
+            //     $path = Storage::disk('local')->path('homeContent.json');
+            //     if (!Storage::disk('local')->has('homeContent.json')) {
             //         GenerateHomeContent($domain);
             //     }
             //     $data = json_decode(file_get_contents($path), true);

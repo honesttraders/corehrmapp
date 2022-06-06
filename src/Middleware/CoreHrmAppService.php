@@ -36,21 +36,21 @@ class CoreHrmAppService{
             return $next($request);
         }
 
-        $temp = Storage::exists('.temp_app_installed') ? Storage::get('.temp_app_installed') : false;
+        $temp = Storage::disk('local')->exists('.temp_app_installed') ? Storage::disk('local')->get('.temp_app_installed') : false;
 
         if (!$temp) {
             $database = $this->service_repo->checkDatabase();
             \Log::info('database: '.$database);
-            $logout = Storage::exists('.logout') ? Storage::get('.logout') : false;
+            $logout = Storage::disk('local')->exists('.logout') ? Storage::disk('local')->get('.logout') : false;
             if (!$database and !$logout) {
                 \Log::info($request->url());
                 \Log::info('Table not found');
-                Storage::put('.logout', 'true');
-                Storage::delete(['.access_code', '.account_email']);
-                Storage::put('.app_installed', '');
+                Storage::disk('local')->put('.logout', 'true');
+                Storage::disk('local')->delete(['.access_code', '.account_email']);
+                Storage::disk('local')->put('.app_installed', '');
             }
         }
-        $c = Storage::exists('.app_installed') ? Storage::get('.app_installed') : false;
+        $c = Storage::disk('local')->exists('.app_installed') ? Storage::disk('local')->get('.app_installed') : false;
         \Log::info("C : ".$c);
         if (!$c) {
             return redirect('/install');
