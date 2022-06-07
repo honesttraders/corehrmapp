@@ -111,7 +111,7 @@ $base_path = 'public/vendor/honesttraders';
 
                 </div>
                     @if(env('APP_SYNC'))
-                        <div class="px-5 pb-4 d-flex align-items-center gap-3">
+                        <div class="px-5 pb-4 d-flex align-items-center gap-2">
                             <input class="form-check-input" type="checkbox" name="seed" id="flexRadioDefault2"  />
                             <label class="form-check-label" for="flexRadioDefault2">
                                 {{ __('Install With Demo Data') }}
