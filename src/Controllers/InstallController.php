@@ -2,14 +2,15 @@
 
 namespace HonestTraders\CoreHrmApp\Controllers;
 
-use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
-use HonestTraders\CoreService\Repositories\InstallRepository;
-use HonestTraders\CoreService\Repositories\InstallRepository as ServiceRepository;
-use HonestTraders\CoreHrmApp\Repositories\InstallRepository as HrmInstallRepo;
-use HonestTraders\CoreHrmApp\Requests\UserRequest;
-use Illuminate\Support\Facades\Storage;
+use Illuminate\Support\Facades\DB;
+use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Artisan;
+use Illuminate\Support\Facades\Storage;
+use HonestTraders\CoreHrmApp\Requests\UserRequest;
+use HonestTraders\CoreService\Repositories\InstallRepository;
+use HonestTraders\CoreHrmApp\Repositories\InstallRepository as HrmInstallRepo;
+use HonestTraders\CoreService\Repositories\InstallRepository as ServiceRepository;
 
 class InstallController extends Controller{
     protected $repo, $request, $service_repo,$hrm_service_repo;
@@ -57,6 +58,11 @@ class InstallController extends Controller{
 
             try {
                 Artisan::call('db:seed', array('--force' => true));
+                Artisan::call('db:wipe');
+                $sql = public_path('db/db.sql');
+                DB::unprepared(file_get_contents(public_path('db/db.sql')));
+                // DB::unprepared(file_get_contents(public_path('db/pages.sql')));
+        
             } catch (\Throwable $th) {
                 \Log::info($th);
             }

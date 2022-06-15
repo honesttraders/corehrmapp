@@ -1,6 +1,7 @@
 <?php
 
 namespace HonestTraders\CoreHrmApp\Repositories;
+
 ini_set('max_execution_time', -1);
 
 use Carbon\Carbon;
@@ -49,7 +50,6 @@ class InstallRepository
                 'APP_ENV' => 'production',
                 'APP_DEBUG' => 'false',
             ]);
-
         } catch (\Exception $e) {
 
             Storage::disk('local')->delete(['.user_email', '.user_pass']);
@@ -104,14 +104,17 @@ class InstallRepository
             //db commit
             \Log::info($user);
 
+            $company               = $user->company;
+            $company->name         = 'Super admin';
+            $company->company_name = 'Super admin';
+            $company->email        = $params['email'];
+            $company->save();
+
             DB::commit();
         } catch (\Exception $e) {
             $this->installRepository->rollbackDb();
             \Log::info($e);
             // throw ValidationException::withMessages(['message' => $e->getMessage()]);
         }
-
-
     }
-
 }
