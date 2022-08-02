@@ -1,6 +1,6 @@
 {
     "name": "honesttraders/corehrmapp",
-    "description": "Service Provider for HRM application for Honest Traders",
+    "description": "Service Provider for HRM application for OnestTech",
     "type": "library",
     "require": {
         "honesttraders/core-service": "dev-main"
