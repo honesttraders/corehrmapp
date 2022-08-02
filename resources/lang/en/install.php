@@ -8,5 +8,5 @@ return array(
 "password" => "Password",
 "password_confirmation" => "Confirm Password",
 'with_demo_data' => 'Install With Demo Data',
-"welcome_description" => "Thank you for choosing Hr24Hours for Human Resource Management. Please follow the steps to complete HRM installation!",
+"welcome_description" => "Thank you for choosing OnestTech HRM for Human Resource Management. Please follow the steps to complete HRM installation!",
 );
