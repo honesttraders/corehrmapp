@@ -24,16 +24,16 @@
 
 ## Credits
 
-- [honesttraders](https://wwww.honesttradersltd.com)\
+- [honesttraders](https://wwww.honesttradersltd.com)
 
 
 ## Instalation 
 
-go to karnel.php 
+Go to karnel.php and add "\HonestTraders\CoreHrmApp\Middleware\CoreHrmAppService::class" this line
 ```php
     protected $middlewareGroups = [
         'web' => [
-                CoreHrmAppService::class,
+                \HonestTraders\CoreHrmApp\Middleware\CoreHrmAppService::class,,
         ]
     ];
  ```
@@ -44,6 +44,8 @@ The following examples demonstrate different uses of the vendor:publish command:
 ```bash
     php artisan vendor:publish
 ```
+
+Select honesttraders
 ## About honesttraders Ltd
 
 honesttraders Ltd. is a web development company which is specialising on the Laravel framework.  We are a team of dedicated and experienced Laravel developers who are passionate about building high quality Laravel applications.
