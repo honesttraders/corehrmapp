@@ -24,7 +24,7 @@
 
 ## Credits
 
-- [honesttraders](https://wwww.honesttradersltd.com)
+- [honesttraders](https://onesttech.com)
 
 
 ## Instalation 
