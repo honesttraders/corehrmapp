@@ -33,7 +33,7 @@ Go to karnel.php and add "\HonestTraders\CoreHrmApp\Middleware\CoreHrmAppService
 ```php
     protected $middlewareGroups = [
         'web' => [
-                \HonestTraders\CoreHrmApp\Middleware\CoreHrmAppService::class,,
+                \HonestTraders\CoreHrmApp\Middleware\CoreHrmAppService::class,
         ]
     ];
  ```
