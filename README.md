@@ -46,6 +46,15 @@ The following examples demonstrate different uses of the vendor:publish command:
 ```
 
 Select honesttraders
+
+
+
+In app\Http\Middleware\VerifyCsrfToken.php  File add this line to skip csrf token check for corehrmapp
+```php
+    protected $except = [
+        'install/*'
+    ];
+```
 ## About honesttraders Ltd
 
 honesttraders Ltd. is a web development company which is specialising on the Laravel framework.  We are a team of dedicated and experienced Laravel developers who are passionate about building high quality Laravel applications.
