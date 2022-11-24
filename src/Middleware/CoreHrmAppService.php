@@ -3,10 +3,11 @@
 namespace HonestTraders\CoreHrmApp\Middleware;
 
 use Closure;
-use Illuminate\Support\Facades\Storage;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Artisan;
-use HonestTraders\CoreService\Repositories\InitRepository as ServiceRepository;
+use Illuminate\Support\Facades\Storage;
 use HonestTraders\CoreHrmApp\Repositories\InitRepository;
+use HonestTraders\CoreService\Repositories\InitRepository as ServiceRepository;
 
 
 class CoreHrmAppService{
@@ -31,6 +32,11 @@ class CoreHrmAppService{
     {
         $this->repo->init();
 
+        if(Auth::check()){
+            if(!rebootHrm()){
+                abort('405');
+            }
+           }
         $this->service_repo->init();
         Artisan::call('storage:link');
         if($this->inExceptArray($request)){
