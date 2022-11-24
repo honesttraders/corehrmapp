@@ -37,8 +37,10 @@ class InstallController extends Controller{
 
     public function user(){
         $ac = Storage::disk('local')->exists('.temp_app_installed') ? Storage::disk('local')->get('.temp_app_installed') : null;
+      
         Artisan::call('optimize:clear');
         if(!$this->service_repo->checkDatabaseConnection() || !$ac){
+            return redirect()->back();
             abort(404);
         }
 

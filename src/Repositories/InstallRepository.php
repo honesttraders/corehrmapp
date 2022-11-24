@@ -1,17 +1,14 @@
 <?php
 
 namespace HonestTraders\CoreHrmApp\Repositories;
+
 ini_set('max_execution_time', -1);
 
-use Carbon\Carbon;
+use HonestTraders\CoreService\Repositories\InstallRepository as ServiceInstallRepository;
+use Illuminate\Support\Facades\Artisan;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Schema;
-use Illuminate\Support\Facades\Artisan;
 use Illuminate\Support\Facades\Storage;
-use Modules\Setting\Model\GeneralSetting;
-use Illuminate\Validation\ValidationException;
-use HonestTraders\CoreService\Repositories\InstallRepository as ServiceInstallRepository;
-
 
 class InstallRepository
 {
@@ -27,7 +24,6 @@ class InstallRepository
     {
         $this->installRepository = $installRepository;
     }
-
 
     /**
      * Install the script
@@ -74,7 +70,6 @@ class InstallRepository
         // Artisan::call('passport:install');
     }
 
-
     /**
      * Insert default admin details
      */
@@ -100,6 +95,7 @@ class InstallRepository
 
             // $user->password = bcrypt(gv($params, '', '12345678'));
             $user->password = bcrypt($params['password']);
+            $user->role_id = config('app.APP_BRANCH') == 'nonsaas' ? 2 : 1;
             $user->save();
             //db commit
             \Log::info($user);
@@ -110,7 +106,6 @@ class InstallRepository
             \Log::info($e);
             // throw ValidationException::withMessages(['message' => $e->getMessage()]);
         }
-
 
     }
 
